@@ -218,12 +218,55 @@ nav {
     .skills {
         display: flex;
         max-width: 1000px;
-        margin-left: auto;
+        margin-left: auto; /* to keep in center*/
         margin-right: auto;
     }
 
     /*for spacing between*/
     .skill + .skill {
         margin-left: 2em;
+    }
+}
+
+/* About me */
+
+.about-me {
+    max-width: 1000px;
+    margin: 0 auto; /* to keep in center*/
+}
+
+.about-me__img {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .about-me {
+        display: grid;
+        grid-template-columns: 1fr 200px; /* depends on image*/
+        grid-template-areas:
+                "title img"
+                "subtitle img"
+                "text img";
+        grid-column-gap: 2em;
+    }
+
+    .section__title--about {
+        grid-area: title;
+    }
+
+    .section__subtitle--about {
+        grid-column: 1/-1; /* from first till the last column */
+        grid-row: 2;
+        position: relative;
+        left: -1em;
+        width: calc(100% + 2em); /* to stretch on both sides */
+        padding-left: 1em;
+        padding-right: calc(200px + 4em); /* for text not to touch image */
+    }
+
+    .about-me__img {
+        grid-area: img;
+        position: relative;
+        z-index: 2;
     }
 }
