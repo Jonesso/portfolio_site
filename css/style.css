@@ -77,7 +77,7 @@ strong {
     color: var(--clr-dark);
     text-decoration: none;
     cursor: pointer;
-    font-size: .8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
@@ -339,6 +339,20 @@ header {
     margin: 0 auto;
 }
 
+.skills__link {
+    /*color: var(--clr-accent);*/
+    color: inherit;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.skills__link::after {
+    content: '\2192';
+    position: absolute;
+}
+
 @media (min-width: 800px) {
     .skills {
         display: flex;
@@ -364,14 +378,20 @@ header {
     box-shadow: var(--bs);
 }
 
+.about-me__btn {
+    margin-top: 1em;
+    margin-left: 20%;
+}
+
 @media (min-width: 600px) {
     .about-me {
         display: grid;
-        grid-template-columns: 1fr 200px; /* depends on image*/
+        grid-template-columns: 1fr 300px; /* depends on image*/
         grid-template-areas:
                 "title img"
                 "subtitle img"
-                "text img";
+                "text img"
+                "button img";
         grid-column-gap: 2em;
     }
 
@@ -393,6 +413,12 @@ header {
         grid-area: img;
         position: relative;
         z-index: 2;
+    }
+
+    .about-me__btn {
+        width: 33%;
+        grid-area: button;
+        margin-left: 0;
     }
 }
 
@@ -430,6 +456,10 @@ header {
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .5;
+}
+
+.works__btn {
+    margin-top: 2em;
 }
 
 /* Contact me */
@@ -555,7 +585,7 @@ textarea {
     width: 25%;
 }
 
-/* Individual portfolio item styles */
+/* Individual portfolio items style */
 
 .portfolio-item-individual {
     padding: 0 2em 2em;
@@ -567,4 +597,97 @@ textarea {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Skills page style */
+
+.skills-section {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-section p {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.programming_countdown {
+    text-align: center;
+}
+
+.programming_countdown p {
+    font-weight: var(--fw-bold);
+}
+
+#DateCountdown {
+    width: 50%;
+    margin: 1em auto;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+}
+
+.progress-bar {
+    border-radius: 0.2em;
+    overflow: hidden;
+    width: 20em;
+    margin-bottom: 1em;
+}
+
+.progress-bar span {
+    display: block;
+}
+
+.bar {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.progress {
+    width: 0;
+    display: block;
+    background: var(--clr-accent);
+    color: var(--clr-light);
+    padding: 0.2em;
+}
+
+.skills__value {
+    position: absolute;
+    transform: translate3d(0, 1em, 0);
+}
+
+.skills__name p {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.section__subtitle--skills {
+    font-weight: var(--fw-bold);
+    margin-top: 1em;
+}
+
+.counters-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.counter__amount {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-h3);
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.counter__title {
+    margin-top: 0;
+}
+
+.counter img {
+    height: 4em;
+    margin: 1em auto;
 }
