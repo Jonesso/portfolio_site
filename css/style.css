@@ -625,10 +625,12 @@ textarea {
     margin: 1em auto;
 }
 
-.skills-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+@media (min-width: 600px) {
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
+    }
 }
 
 .progress-bar {
@@ -691,3 +693,5 @@ textarea {
     height: 4em;
     margin: 1em auto;
 }
+
+/* About me page style */
