@@ -629,7 +629,6 @@ textarea {
     .skills-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        /*grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));*/
     }
 }
 
@@ -695,3 +694,43 @@ textarea {
 }
 
 /* About me page style */
+
+/* Tools page style */
+
+.tools-section {
+    text-align: center;
+}
+
+.section__subtitle--tools {
+    font-weight: var(--fw-bold);
+}
+
+.tools__img {
+    margin: 1em auto;
+    width: 5em;
+}
+
+.tools__img-gray {
+    -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    -moz-filter: grayscale(100%); /* Firefox 10+, Firefox on Android */
+    filter: grayscale(100%); /*IE 6-9*/
+
+    transition: all 250ms ease;
+}
+
+.tools__img-gray:hover {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+@media (min-width: 400px) {
+    .active-tools-container,
+    .future-tools-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 1em auto;
+        justify-content: center;
+    }
+
+}
