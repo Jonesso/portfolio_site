@@ -15,7 +15,7 @@
 
     --clr-light: #fff;
     --clr-dark: #303030;
-    --clr-accent: #8BC34A;
+    --clr-accent: #8bc34a;
 
     --fs-h1: 3rem;
     --fs-h2: 2.25rem;
@@ -97,6 +97,15 @@ strong {
     font-size: 2rem;
     letter-spacing: 0.15em;
     padding: 0.5em 1.5em;
+}
+
+.about-me__btn {
+    margin-top: 1em;
+    margin-left: 20%;
+}
+
+.works__btn {
+    margin-top: 2em;
 }
 
 /* Typography */
@@ -339,20 +348,6 @@ header {
     margin: 0 auto;
 }
 
-.skills__link {
-    /*color: var(--clr-accent);*/
-    color: inherit;
-    font-weight: var(--fw-bold);
-    font-size: var(--fs-h3);
-    text-decoration: underline;
-    text-transform: uppercase;
-}
-
-.skills__link::after {
-    content: '\2192';
-    position: absolute;
-}
-
 @media (min-width: 800px) {
     .skills {
         display: flex;
@@ -378,10 +373,6 @@ header {
     box-shadow: var(--bs);
 }
 
-.about-me__btn {
-    margin-top: 1em;
-    margin-left: 20%;
-}
 
 @media (min-width: 600px) {
     .about-me {
@@ -456,10 +447,6 @@ header {
 .portfolio__item:focus .portfolio__img {
     transform: scale(1.2);
     opacity: .5;
-}
-
-.works__btn {
-    margin-top: 2em;
 }
 
 /* Contact me */
@@ -599,6 +586,33 @@ textarea {
     margin-right: auto;
 }
 
+.portfolio-item__img {
+    height: 10em;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .portfolio-item__img {
+        height: 400px;
+    }
+}
+
+.portfolio-item__link {
+    color: var(--clr-accent);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+}
+
+.portfolio-item__link::after {
+    content: "\2192";
+    display: inline-block;
+    color: var(--clr-accent);
+}
+
+.portfolio-item__link:hover {
+    text-decoration: underline;
+}
+
 /* Skills page style */
 
 .skills-section {
@@ -695,6 +709,103 @@ textarea {
 
 /* About me page style */
 
+.about-me-individual {
+    padding: 0 2em 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-me-individual p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    .projects-list-container {
+        margin: 0 25%;
+    }
+
+    .bio-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 1em;
+    }
+}
+
+.holder {
+    margin: 2em auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 0;
+}
+
+.holder p {
+    font-size: var(--fs-h3);
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.dot {
+    background: var(--clr-accent);
+    border-radius: 4em;
+    height: 4em;
+    overflow: hidden;
+    width: 4em;
+    margin: 1em 1em 1em auto;
+}
+
+.projects-list {
+    list-style: none;
+    counter-reset: my-counter;
+}
+
+.projects-list li {
+    counter-increment: my-counter;
+    margin: 0.25rem;
+}
+
+.projects-list li::before {
+    content: counter(my-counter);
+    background: var(--clr-accent);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    color: var(--clr-light);
+    text-align: center;
+    margin-right: 0.5rem;
+}
+
+.projects-list .projects-list li::before {
+    opacity: 0.6;
+}
+
+.projects-list .projects-list .projects-list li::before {
+    opacity: 0.4;
+}
+
+.projects-list__link {
+    color: var(--clr-accent);
+    text-decoration: none;
+}
+
+.projects-list__link:hover {
+    text-decoration: underline;
+}
+
+.section__subtitle--about-me {
+    font-weight: var(--fw-bold);
+    margin-top: 1em !important;
+    text-align: center;
+}
+
+.bio-container {
+    text-align: center;
+}
 /* Tools page style */
 
 .tools-section {
@@ -732,5 +843,4 @@ textarea {
         margin: 1em auto;
         justify-content: center;
     }
-
 }
