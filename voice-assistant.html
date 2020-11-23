@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Voice Assistant</title>
+    <!-- normalize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <!-- font awesome: social icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="img/logo.png" alt="Developer logo">
+        </a>
+    </div>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="index.html#skills" class="nav__link">My Skills</a></li>
+            <li class="nav__item"><a href="index.html#about" class="nav__link">About Me</a></li>
+            <li class="nav__item"><a href="index.html#works" class="nav__link">My Works</a></li>
+            <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact Me</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section class="intro">
+    <h1 class="section__title section__title--intro">
+        My simple<strong>Voice Assistant</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">Android app prototype</p>
+    <img src="img/voice-assistant.jpg" alt="" class="intro__img">
+</section>
+
+
+<div class="portfolio-item-individual">
+    <p>Lyra is the prototype of voice assistant that can help you with some routines. It can greet you, tell you the
+        time and weather in your region and make an appointment reminder.</p>
+    <p>It is only basic project that was used for educational purposes while trying to figure out mobile development
+        patterns.</p>
+    <img src="img/voice-assistant-demo.png" alt="Voice assistant app design" style="margin: 0 auto;">
+    <p>The app is written on pure Java using such instruments as Android Studio, Figma & Adobe Illustrator.</p>
+    <p><a href="https://github.com/Jonesso/SimpleVoiceAssistant"
+          class="portfolio-item__link">See the project source</a></p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <a href="mailto:sonya.pav25@gmail.com" class="footer__link">sonya.pav25@gmail.com</a>
+    <ul class="social-list">
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://vk.com/cyouinhell">
+                <i class="fab fa-vk"></i>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://www.instagram.com/reddie.2.die">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://codepen.io">
+                <i class="fab fa-codepen"></i>
+            </a>
+        </li>
+        <li class="social-list__item">
+            <a class="social-list__link" href="https://github.com/Jonesso">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+    </ul>
+
+    <p class="copyright">&copy;Copyright 2020 Pavlinina Sophia</p>
+</footer>
+
+
+<script src="js/index.js"></script>
+
+</body>
+</html>
