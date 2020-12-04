@@ -10,3 +10,11 @@ navLinks.forEach(link => {
         document.body.classList.remove('nav-open');
     })
 })
+
+function sendForm() {
+    let link = 'mailto:sonya.pav25@gmail.com' +
+        '?subject=' + encodeURIComponent(document.getElementById('subject').value) +
+        ' from ' + encodeURIComponent(document.getElementById('name').value) +
+        '&body=' + encodeURIComponent(document.getElementById('message').value);
+    window.location.href = link;
+}

@@ -156,19 +156,19 @@
 <section class="contact" id="contact">
     <h1>Contact me</h1>
     <form action="">
-        <label for="name" class="name" class="name">Name
+        <label for="name" class="name">Name
             <input type="text" id="name">
         </label>
 
-        <label for="email" class="email" class="email">Email
-            <input type="email" id="email">
+        <label for="subject" class="subject">Subject
+            <input type="text" id="subject">
         </label>
 
         <label message="message" class="message">Message
-            <textarea name="" id="message" cols="30" rows="10"></textarea>
+            <textarea name="mail-body" id="message" cols="30" rows="10"></textarea>
         </label>
 
-        <input class="btn form-btn" type="submit" value="SEND">
+        <input class="btn form-btn" type="submit" value="SEND" onclick="sendForm()">
     </form>
 </section>
 
